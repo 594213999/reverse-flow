@@ -1,0 +1,15 @@
+# Keep text files LF so the shipped .ps1 and .py behave identically on every OS.
+* text=auto eol=lf
+
+*.ps1 text eol=lf
+*.py  text eol=lf
+*.md  text eol=lf
+*.json text eol=lf
+
+# Binaries must never be normalised.
+*.exe binary
+*.dll binary
+*.zip binary
+*.7z  binary
+*.png binary
+*.jpg binary

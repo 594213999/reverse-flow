@@ -1,0 +1,65 @@
+# --- secrets: never commit ---
+*.key
+*.pem
+*.pfx
+.env
+.env.*
+secrets.*
+*credentials*
+
+# --- downloaded engines and tools (fetch from official sources; see THIRD-PARTY.md) ---
+vendor/
+tools/
+engines/
+*.zip
+*.7z
+*.msi
+*.jar
+*.exe
+
+# --- Craft Anything / reverse skill data and output ---
+*.cany/
+capture/
+checks/
+inbox/
+bundle.json
+*.bundle.json
+
+# --- reverse-index: generated and machine-specific ---
+# The downloaded datasets are large and refreshed upstream; aliases.json is a
+# hand-maintained source file and IS committed.
+reverse-index/data/entries.json
+reverse-index/data/resurrected.json
+reverse-index/data/removed.json
+reverse-index/data/subset.json
+reverse-index/data/state.json
+reverse-index/INDEX.md
+reverse-index/sync.log
+reverse-index/vendor/
+reverse-index/scripts/*.bak.*
+reverse-index/tests/__pycache__/
+
+# --- evidence cases (contain target-derived content) ---
+work/
+evidence/
+*.evidence.json
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- transcripts and working logs ---
+transcript.json
+build-activity.log
+feed.json
+usage.json
